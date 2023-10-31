@@ -18,15 +18,13 @@ function TaskList() {
     },[])
     
   return (
-    <div className='parentdiv'>
+    <div className={savedTask ? 'parentdiv' : null}>
         <div className="childdiv">
-            {savedTask &&
-                <ul>
-                    {savedTask.map((task)=>
-                        <li>{task.title}</li>
-                    )}
-                </ul>
-            }
+            <ul>
+                {savedTask.map((task)=>
+                    <li>{task.title}</li>
+                )}
+            </ul>
         </div>
     </div>
   )

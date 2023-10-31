@@ -1,0 +1,15 @@
+.taskdiv{
+    min-height: 300px;
+    max-height: fit-content;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.taskdiv > .taskbox{
+    background-color: #fff;
+    width: 500px;
+    height: 200px;
+}
+.taskbox  button{
+    margin-right: 20px ;
+}

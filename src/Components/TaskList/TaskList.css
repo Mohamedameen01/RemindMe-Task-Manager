@@ -1,6 +1,5 @@
 .parentdiv{
-    height: 300px;
-    display: block;
+    width: 100%;
     max-height: fit-content;
     margin-top: 100px;
     text-align: center;
