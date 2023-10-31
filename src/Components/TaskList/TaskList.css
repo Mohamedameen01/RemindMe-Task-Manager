@@ -1,0 +1,12 @@
+.parentdiv{
+    height: 300px;
+    display: block;
+    max-height: fit-content;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.childdiv li{
+    list-style-type: square;
+    color: blue;
+}

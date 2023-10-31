@@ -1,10 +1,14 @@
-
 import './App.css';
+import Navbar from './Components/Navbar/Navbar'
+import TaskForm from './Components/TaskForm/TaskForm';
+import TaskList from './Components/TaskList/TaskList';
 
 function App() {
   return (
     <div className="App">
-      <h1>hello world!</h1>
+      <Navbar />
+      <TaskForm />
+      <TaskList />
     </div>
   );
 }
