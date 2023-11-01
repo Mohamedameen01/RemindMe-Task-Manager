@@ -19,7 +19,7 @@ function TaskForm() {
         try{
             const docRef = addDoc(collection(db,"Saved Tasks"),{
                 time:new Date(),
-                title:taskDetails.title,
+                title:taskDetails.title.toUpperCase(),
                 description:taskDetails.description
             })
         // console.log("Document written with ID: ", docRef.data())
@@ -32,23 +32,22 @@ function TaskForm() {
     <div className='taskform'>
         <div className="task-box">
             <h1>What to Do?</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} id='task-form'>
                 <input 
                     type="text" 
                     id='task-title'
                     placeholder='Title' 
                     name='title'
                     onChange={handleChange}
-                    />
+                />
                 <textarea 
                     name="description" 
                     id="task-discrip" 
-                    cols="30" 
-                    rows="3"
                     onChange={handleChange}
                     placeholder='Description'
-                    />
-                <button >
+                    maxLength={100}
+                />
+                <button>
                     Save
                 </button>
             </form>

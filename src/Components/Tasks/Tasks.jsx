@@ -3,6 +3,7 @@ import './Tasks.css'
 import { collection, getDocs } from 'firebase/firestore'
 import { db } from '../../Firebase/Confiq'
 
+
 function Tasks() {
     const [showTask,setShowTask] = useState([])
     useEffect(()=>{
@@ -23,10 +24,16 @@ function Tasks() {
             <div className="taskbox">
                 <h1>{obj.title}</h1>
                 <p>{obj.description}</p>
-                <div className="btns">
-                    <button>Edit</button>
-                    <button>Delete</button>
-                    <button>View</button>
+                <div id="task-btns">
+                    <button
+                        className='btn1'
+                    >
+                        Edit
+                    </button>
+                    <button
+                        className='btn2'
+                    >Delete</button>
+                    <button className='btn3'>View</button>
                 </div>
             </div>
         )}     

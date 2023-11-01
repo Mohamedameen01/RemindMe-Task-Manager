@@ -3,13 +3,43 @@
     max-height: fit-content;
     margin-top: 20px;
     padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,2fr);
+    justify-content: space-around;
+    align-items:baseline;
 }
 
 .taskdiv > .taskbox{
     background-color: #fff;
     width: 500px;
-    height: 200px;
+    min-height: 200px;
+    max-height: fit-content;
+    border: 3px groove #164ba1;
+    border-radius: 5px;
+    margin: 20px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+.taskbox > h1,p{
+    padding: 10px;
+}
+
+.taskbox > #task-btns{
+    display: flex;
+    justify-content: end;
 }
 .taskbox  button{
-    margin-right: 20px ;
+    width: auto;
+    padding: 10px;
+    border-style: none;
+    border-radius: 5px;
+}
+#task-btns > .btn1{
+     color: #1E90FF;
+}
+#task-btns > .btn2{
+    color: red;
+}
+#task-btns > .btn3{
+    color: #00FF00;
 }
