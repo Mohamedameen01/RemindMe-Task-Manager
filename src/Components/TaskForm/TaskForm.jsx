@@ -17,11 +17,12 @@ function TaskForm() {
     const handleSubmit = (e)=>{
         e.preventDefault()
         try{
-            const docRef = addDoc(collection(db,"Saved Tasks"),{
+            addDoc(collection(db,"Saved Tasks"),{
                 time:new Date(),
                 title:taskDetails.title.toUpperCase(),
                 description:taskDetails.description
             })
+            setTaskDetails({title:"",description:""})
         // console.log("Document written with ID: ", docRef.data())
         }
         catch (e){
@@ -39,6 +40,7 @@ function TaskForm() {
                     placeholder='Title' 
                     name='title'
                     onChange={handleChange}
+                    value={taskDetails.title}
                 />
                 <textarea 
                     name="description" 
@@ -46,6 +48,7 @@ function TaskForm() {
                     onChange={handleChange}
                     placeholder='Description'
                     maxLength={100}
+                    value={taskDetails.description}
                 />
                 <button>
                     Save

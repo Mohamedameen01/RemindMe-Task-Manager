@@ -1,11 +1,12 @@
 .taskdiv{
     min-height: 300px;
     max-height: fit-content;
-    margin-top: 20px;
+    margin: 20px 0 0 3rem;
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(2,2fr);
     justify-content: space-around;
+    column-gap: 3rem;
     align-items:baseline;
 }
 
@@ -26,7 +27,7 @@
 
 .taskbox > #task-btns{
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 .taskbox  button{
     width: auto;
@@ -42,4 +43,49 @@
 }
 #task-btns > .btn3{
     color: #00FF00;
+}
+.editdiv{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.edit-box{
+    width: 400px;
+    height: 300px;
+    border: 3px groove #164ba1;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column ;
+    background-color: #fff;
+}
+.edit-box > #edit-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: #22262b;
+}
+
+
+#edit-form input,textarea,button{
+    width: 360px;
+    margin: 10px 10px;
+    font-size: large;
+    letter-spacing: 1px;
+}
+
+#edit-form > input{
+    padding: 5px 5px;
+}
+
+#edit-form > textarea{
+    padding: 5px 5px 40px 5px;
+}
+
+#edit-form > button{
+    padding: 5px 10px;
+    margin-left: 15px;
+    background-color: #22262b;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 5px;
 }
