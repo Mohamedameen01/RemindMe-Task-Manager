@@ -93,8 +93,7 @@ function Tasks() {
                     <div id='edit-content'>
                         <h1>Edit</h1>
                         <CloseIcon 
-                            color="black" 
-                            fontSize="large" 
+                            color="black"  
                             className='close-icon'
                             onClick={()=> setIsEdit(false)} 
                         />

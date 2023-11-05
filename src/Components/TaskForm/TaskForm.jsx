@@ -47,7 +47,7 @@ function TaskForm() {
                     id="task-discrip" 
                     onChange={handleChange}
                     placeholder='Description'
-                    maxLength={100}
+                    maxLength={200}
                     value={taskDetails.description}
                 />
                 <button>

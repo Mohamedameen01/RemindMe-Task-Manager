@@ -1,20 +1,19 @@
 .taskdiv{
     min-height: 300px;
     max-height: fit-content;
-    margin: 20px 0 0 3rem;
+    margin: 30px 0 0 3rem;
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(2,2fr);
     justify-content: space-around;
-    column-gap: 3rem;
     align-items:baseline;
 }
 
 .taskdiv > .taskbox{
     background-color: #fff;
     width: 500px;
-    min-height: 200px;
-    max-height: fit-content;
+    min-height: min-content;
+    max-height: 230px;
     border: 3px groove #164ba1;
     border-radius: 5px;
     margin: 20px;
@@ -22,18 +21,24 @@
     overflow-wrap: break-word;
 }
 .taskbox > h1,p{
-    padding: 10px;
+    padding: 8px 10px 5px 15px;
 }
 
+.taskbox > p{
+    padding: 2px 10px 10px 25px;
+}
 .taskbox > #task-btns{
+    height: 80px;
     display: flex;
     justify-content: flex-end;
+    align-items: flex-end;
 }
 .taskbox  button{
     width: auto;
-    padding: 10px;
+    padding: 8px;
     border-style: none;
     border-radius: 5px;
+    cursor: pointer;
 }
 #task-btns > .btn1{
      color: #1E90FF;
@@ -44,6 +49,82 @@
 #task-btns > .btn3{
     color: #00FF00;
 }
+
+/* this is for mobile */
+@media (max-width:365px){
+    .taskdiv{
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        margin: 40px 0 0 .5rem;
+    }
+    .taskdiv > .taskbox{
+        width: 300px;
+        min-height: 160px;
+        margin: 10px;
+    }
+    .taskbox > h1{
+        font-size: 1.5rem;
+        padding: 8px 10px 5px 10px;
+    }
+    .taskbox > p{
+        padding: 5px 10px 10px 10px;
+    }
+    .taskbox > #task-btns{
+        height: 60px;
+    }
+    .taskbox  button{
+        width: auto;
+        padding: 8px;
+        font-size: 1rem;
+    }
+}
+
+@media (365px <= width <= 768px){
+    .taskdiv{
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        margin: 40px 0 0 .5rem;
+    }
+    .taskdiv > .taskbox{
+        width: 350px;
+        min-height: 160px;
+        margin: 10px;
+    }
+    .taskbox > h1{
+        font-size: 1.5rem;
+        padding: 8px 10px 5px 10px;
+    }
+    .taskbox > p{
+        padding: 5px 10px 10px 10px;
+    }
+    .taskbox  button{
+        width: auto;
+        padding: 8px;
+        font-size: 1rem;
+    }
+}
+
+@media (768px <= width <= 992px){
+    .taskdiv{
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        column-gap: 2rem;
+        margin: 40px 0 0 .5rem;
+    }
+    .taskdiv > .taskbox{
+        width: 650px;
+        min-height: 160px;
+        margin: 10px;
+    }
+}
+
+
+
+
+/* this is for edit box  */
 .editdiv{
     display: flex;
     justify-content: center;
@@ -65,6 +146,9 @@
     color: #22262b;
 }
 
+#edit-content > .close-icon{
+    font-size:large;
+}
 
 #edit-form input,textarea,button{
     width: 360px;
@@ -88,4 +172,78 @@
     color: #fff;
     font-weight: 500;
     border-radius: 5px;
+}
+
+@media(max-width:365px){
+    .editform{
+        height: 400px;
+    }
+    .edit-box{
+        width: 250px;
+        height: 260px;
+    }
+    #edit-content > h1{
+        font-size: 1.7rem;
+    }
+    #edit-form input{
+        width: 220px;
+        margin: 5px 10px;  
+    }
+    #edit-form > textarea{
+        width: 220px;
+        margin: 5px 10px;
+    }
+    #edit-form > button{
+        width: 225px;
+        margin: 5px 12px;
+    }   
+}
+
+@media (365px <= width <= 576px) {
+    .editform{
+        height: 400px;
+    }
+    .edit-box{
+        width: 300px;
+        height: 260px;
+    }
+    #edit-content > h1{
+        font-size: 1.7rem;
+    }
+    #edit-form input{
+        width: 260px;
+        margin: 5px 10px;  
+    }
+    #edit-form > textarea{
+        width: 260px;
+        margin: 5px 10px;
+    }
+    #edit-form > button{
+        width: 265px;
+        margin: 5px 12px;
+    }
+}
+@media (576px <= width <= 992px){
+    .editform{
+        height: 380px;
+    }
+    .edit-box{
+        width: 400px;
+        height: 260px;
+    }
+    .edit-content > h1{
+        font-size: 1.9rem;
+    }
+    #edit-form input{
+        width: 360px;
+        margin: 5px 10px;  
+    }
+    #edit-form > textarea{
+        width: 360px;
+        margin: 5px 10px;
+    }
+    #edit-form > button{
+        width: 365px;
+        margin: 5px 12px;
+    }
 }

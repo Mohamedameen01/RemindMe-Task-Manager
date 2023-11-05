@@ -5,7 +5,7 @@
     top: 50px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center ;
     background-color: #fcfafa ;
 }
 .task-box{
@@ -44,4 +44,78 @@
     color: #fff;
     font-weight: 500;
     border-radius: 5px;
+}
+
+@media (max-width:365px){
+    .taskform{
+        height: 380px;
+    }
+    .task-box{
+        width: 250px;
+        height: 260px;
+    }
+    .task-box > h1{
+        font-size: 1.7rem;
+    }
+    #task-form input{
+        width: 220px;
+        margin: 5px 10px;  
+    }
+    #task-form > textarea{
+        width: 220px;
+        margin: 5px 10px;
+    }
+    #task-form > button{
+        width: 225px;
+        margin: 5px 12px;
+    }
+}
+@media (365px <= width <= 576px) {
+    .taskform{
+        height: 380px;
+    }
+    .task-box{
+        width: 300px;
+        height: 260px;
+    }
+    .task-box > h1{
+        font-size: 1.7rem;
+    }
+    #task-form input{
+        width: 260px;
+        margin: 5px 10px;  
+    }
+    #task-form > textarea{
+        width: 260px;
+        margin: 5px 10px;
+    }
+    #task-form > button{
+        width: 265px;
+        margin: 5px 12px;
+    }
+}
+
+@media (576px <= width <= 768px){
+    .taskform{
+        height: 380px;
+    }
+    .task-box{
+        width: 380px;
+        height: 260px;
+    }
+    .task-box > h1{
+        font-size: 1.9rem;
+    }
+    #task-form input{
+        width: 340px;
+        margin: 5px 10px;  
+    }
+    #task-form > textarea{
+        width: 340px;
+        margin: 5px 10px;
+    }
+    #task-form > button{
+        width: 345px;
+        margin: 5px 12px;
+    }
 }
