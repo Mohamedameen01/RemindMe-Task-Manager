@@ -82,7 +82,7 @@ function Tasks() {
                         >
                             Delete
                         </button>
-                        <button className='btn3'>View</button>
+                       
                     </div>
                 </div>
             )}     

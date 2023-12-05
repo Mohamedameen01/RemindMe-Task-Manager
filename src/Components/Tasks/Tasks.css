@@ -46,9 +46,6 @@
 #task-btns > .btn2{
     color: red;
 }
-#task-btns > .btn3{
-    color: #00FF00;
-}
 
 /* this is for mobile */
 @media (max-width:365px){
